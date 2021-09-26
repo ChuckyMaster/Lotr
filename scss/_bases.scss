@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&family=Open+Sans:wght@400;700&display=swap");
+
+$title: "Cormorant Unicase", serif;
+$content: "Open Sans", sans-serif;
+$hover-a: rgb(202, 183, 5);
+$main-color: rgb(79, 17, 34);
+
+// Classes Globale
+body {
+  font-family: $content;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $title;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}

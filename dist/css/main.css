@@ -1,5 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@700&family=Open+Sans:wght@400;700&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cormorant Unicase", serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   margin: 0;
   padding: 0;
+}
+
+header {
+  color: white;
+  background-image: linear-gradient(55deg, rgba(8, 8, 8, 0.863), rgba(0, 0, 0, 0.178)), url(/img/perso.jpeg);
+  background-position: cover;
+  background-size: cover;
+  height: 500px;
+}
+
+@media (max-width: 800px) {
+  header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  margin: 2vh 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  padding: 0 1.5vw;
+}
+
+header nav ul li a {
+  transition: 0.4s ease;
+}
+
+@media (max-width: 768px) {
+  header nav ul li a {
+    display: none;
+  }
+}
+
+header nav ul li a:hover {
+  color: #cab705;
+}
+
+header nav img {
+  width: 5rem;
+  height: 5rem;
+}
+
+header .title {
+  margin-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  header .title {
+    padding: 0 1.3rem;
+  }
+}
+
+header h1 {
+  font-family: "Cormorant Unicase", serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+#aventures {
+  width: 1060px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #aventures {
+    width: 100%;
+  }
+  #aventures h2, #aventuresp:nth-child(2) {
+    margin: 1rem 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #aventures {
+    width: 100%;
+  }
+}
+
+#aventuresp:nth-child(2) {
+  width: 4vw;
+}
+
+#aventures ol {
+  text-align: start;
+  margin: 4rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-gap: 1.5rem;
+  justify-content: center;
+}
+
+#comunity {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 1060px;
+  margin: 0 auto;
+  border: 1px solid #4f1122;
+}
+
+@media (max-width: 768px) {
+  #comunity {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  #comunity {
+    width: 100%;
+  }
+}
+
+#comunity h2:first-child {
+  margin-top: 5rem;
+}
+
+#comunity h2 {
+  margin: 0;
+}
+
+#comunity .box-container {
+  width: 1060px;
+  display: grid;
+  margin-top: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+#comunity .char-box {
+  text-align: center;
+  margin-top: 2.5rem;
+  padding: 0.5rem;
+}
+
+#comunity .char-box img {
+  width: 20vw;
+  height: 20vh;
+  clip-path: circle();
 }
 /*# sourceMappingURL=main.css.map */

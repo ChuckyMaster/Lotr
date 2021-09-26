@@ -1,4 +1,147 @@
+@import "bases";
+@import "media";
+
 body {
   margin: 0;
   padding: 0;
+}
+
+// ----------------------  Header + nav ------------------------//
+
+header {
+  @include tablet {
+    width: 100%;
+  }
+  @include mobile {
+    width: 100%;
+  }
+  color: white;
+  background-image: linear-gradient(
+      55deg,
+      rgba(8, 8, 8, 0.863),
+      rgba(0, 0, 0, 0.178)
+    ),
+    url(/img/perso.jpeg);
+  background-position: cover;
+  background-size: cover;
+  height: 500px;
+
+  nav {
+    display: flex;
+    justify-content: center;
+
+    ul {
+      margin: 2vh 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      li {
+        padding: 0 1.5vw;
+        a {
+          @include mobile {
+            display: none;
+          }
+          transition: 0.4s ease;
+          &:hover {
+            color: $hover-a;
+          }
+        }
+      }
+    }
+    img {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+
+  .title {
+    @include mobile {
+      padding: 0 1.3rem;
+    }
+    margin-top: 4.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: $title;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// ------------------------- Partie Aventure -------------------//
+
+#aventures {
+  @include mobile {
+    width: 100%;
+    h2,
+    &p:nth-child(2) {
+      margin: 1rem 2rem;
+    }
+  }
+  @include tablet {
+    width: 100%;
+  }
+  &p:nth-child(2) {
+    width: 4vw;
+  }
+
+  width: 1060px;
+  margin: 0 auto;
+  text-align: center;
+  // background-color: grey;
+
+  ol {
+    text-align: start;
+    margin: 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 1.5rem;
+    justify-content: center;
+  }
+}
+
+// -------------Comunity------------//
+
+#comunity {
+  @include mobile {
+    width: 100%;
+  }
+  @include tablet {
+    width: 100%;
+  }
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 1060px;
+  margin: 0 auto;
+  border: 1px solid $main-color;
+
+  h2:first-child {
+    margin-top: 5rem;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  .box-container {
+    width: 1060px;
+    display: grid;
+
+    margin-top: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  .char-box {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 0.5rem;
+    img {
+      width: 20vw;
+      height: 20vh;
+      clip-path: circle();
+    }
+  }
 }
