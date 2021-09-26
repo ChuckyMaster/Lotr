@@ -1,0 +1,16 @@
+{
+  "name": "Lotr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "node-sass": "sass -w scss/:dist/css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
